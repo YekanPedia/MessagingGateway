@@ -116,6 +116,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\YekanPedia.MessagingGateway.DeoendencyResolver\YekanPedia.MessagingGateway.DeoendencyResolver.csproj">
+      <Project>{a26abc3f-934a-4a6d-9cde-eeb9901c0624}</Project>
+      <Name>YekanPedia.MessagingGateway.DeoendencyResolver</Name>
+    </ProjectReference>
     <ProjectReference Include="..\YekanPedia.MessagingGateway.Domain\YekanPedia.MessagingGateway.Domain.csproj">
       <Project>{920350f8-d751-43c2-bf80-acc3337004c7}</Project>
       <Name>YekanPedia.MessagingGateway.Domain</Name>

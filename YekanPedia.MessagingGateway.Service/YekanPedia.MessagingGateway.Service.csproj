@@ -40,10 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factory.cs" />
-    <Compile Include="Implement\NullObject.cs" />
     <Compile Include="Implement\TelegramNotification.cs" />
-    <Compile Include="Interfaces\INotificationStrategy.cs" />
+    <Compile Include="Interfaces\ITelegramNotification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

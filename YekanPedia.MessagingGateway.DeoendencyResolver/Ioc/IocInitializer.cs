@@ -1,9 +1,12 @@
-﻿namespace YekanPedia.MessagingGateway.DependencyResolver
+﻿namespace YekanPedia.MessagingGateway.DeoendencyResolver
 {
     using StructureMap;
     using StructureMap.Web.Pipeline;
     using System;
- 
+    using ExternalService.Interfaces;
+    using ExternalService.Implement;
+    using Service.Interfaces;
+    using Service.Implement;
 
     public class IocInitializer
     {
@@ -12,9 +15,8 @@
         {
             Container = new Container(x =>
             {
-                
-                x.For<INotificationService>().Use<NotificationService>();
-                x.For<Lazy<INotificationService>>().Use(c => new Lazy<INotificationService>(c.GetInstance<NotificationService>));
+                x.For<IRoboTeleProxyAdapter>().Use<RoboTeleProxyAdapter>();
+                x.For<ITelegramNotification>().Use<TelegramNotification>();
             });
         }
         public static object GetInstance(Type pluginType)

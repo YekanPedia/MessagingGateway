@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("YekanPedia.MessagingGateway.DependencyResolver")]
+[assembly: AssemblyTitle("YekanPedia.MessagingGateway.DeoendencyResolver")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("YekanPedia.MessagingGateway.DependencyResolver")]
+[assembly: AssemblyProduct("YekanPedia.MessagingGateway.DeoendencyResolver")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("efae3863-c82e-4922-8fcc-416c9be8bd89")]
+[assembly: Guid("a26abc3f-934a-4a6d-9cde-eeb9901c0624")]
 
 // Version information for an assembly consists of the following four values:
 //

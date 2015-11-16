@@ -6,7 +6,7 @@
     {
         public List<NotificationKey> Type { get; set; }
         public List<string> Message { get; set; }
-        public List<string> Telegram { get; set; }
+        public List<int> Telegram { get; set; }
         public List<string> Sms { get; set; }
         public List<string> Email { get; set; }
     }

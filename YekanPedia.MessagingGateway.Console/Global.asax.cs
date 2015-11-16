@@ -1,13 +1,20 @@
 ﻿namespace YekanPedia.MessagingGateway.Console
 {
+    using System;
     using System.Web;
-    using System.Web.Mvc;
+    using DeoendencyResolver;
 
     public class MvcApplication : HttpApplication
     {
+       
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
+            IocInitializer.Initialize();
+        }
+      
+        protected void Application_EndRequest(object sender, EventArgs e)
+        {
+            IocInitializer.HttpContextDisposeAndClearAll();
         }
     }
 }

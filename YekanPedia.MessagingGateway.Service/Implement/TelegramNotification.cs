@@ -6,14 +6,14 @@
     using ExternalService.Interfaces;
     using ExternalService.RoboTeleProxy;
 
-    public class TelegramNotification : INotificationStrategy
+    public class TelegramNotification : ITelegramNotification
     {
         readonly IRoboTeleProxyAdapter _roboTeleAdapter;
         public TelegramNotification(IRoboTeleProxyAdapter roboTeleAdapter)
         {
             _roboTeleAdapter = roboTeleAdapter;
         }
-        public void Notify(List<string> messages, List<string> reciever)
+        public void Notify(List<string> messages, List<int> reciever)
         {
             var model = new List<SendMessageModel>();
             if (messages.Count > 1)
@@ -23,7 +23,7 @@
                     model.Add(new SendMessageModel
                     {
                         Message = messages[i],
-                        ChatId = int.Parse(reciever[i])
+                        ChatId = reciever[i]
                     });
                 }
             }
@@ -34,7 +34,7 @@
                     model.Add(new SendMessageModel
                     {
                         Message = messages[0],
-                        ChatId = int.Parse(item)
+                        ChatId =  item
                     });
                 }
             }
