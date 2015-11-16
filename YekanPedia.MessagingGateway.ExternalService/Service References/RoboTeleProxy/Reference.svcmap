@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9d6235ef-342d-42ad-ad87-8887b78486a0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:63123/Services/RoboTeleProxy.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RoboTeleProxy.xsd" MetadataType="Schema" ID="ddf41326-db90-43a5-b403-e3168f8a395a" SourceId="1" SourceUrl="http://localhost:63123/Services/RoboTeleProxy.svc?xsd=xsd2" />
+    <MetadataFile FileName="RoboTeleProxy.wsdl" MetadataType="Wsdl" ID="690898ca-e12d-4bd3-a194-95d34fc6a88f" SourceId="1" SourceUrl="http://localhost:63123/Services/RoboTeleProxy.svc?wsdl" />
+    <MetadataFile FileName="RoboTeleProxy.disco" MetadataType="Disco" ID="e16d504c-deef-4b52-a303-094d6877d678" SourceId="1" SourceUrl="http://localhost:63123/Services/RoboTeleProxy.svc?disco" />
+    <MetadataFile FileName="RoboTeleProxy1.xsd" MetadataType="Schema" ID="0a6ac6fe-91fd-475d-a1bd-4df4a084e627" SourceId="1" SourceUrl="http://localhost:63123/Services/RoboTeleProxy.svc?xsd=xsd0" />
+    <MetadataFile FileName="RoboTeleProxy2.xsd" MetadataType="Schema" ID="3a90f2d9-7fdb-49d2-95fe-187f13493a89" SourceId="1" SourceUrl="http://localhost:63123/Services/RoboTeleProxy.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

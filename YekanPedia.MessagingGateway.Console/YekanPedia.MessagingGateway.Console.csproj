@@ -120,6 +120,10 @@
       <Project>{920350f8-d751-43c2-bf80-acc3337004c7}</Project>
       <Name>YekanPedia.MessagingGateway.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\YekanPedia.MessagingGateway.ExternalService\YekanPedia.MessagingGateway.ExternalService.csproj">
+      <Project>{abdce685-a4c4-4acd-9d3a-577a322be151}</Project>
+      <Name>YekanPedia.MessagingGateway.ExternalService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\YekanPedia.MessagingGateway.Service\YekanPedia.MessagingGateway.Service.csproj">
       <Project>{be22f12a-0937-4dc6-9894-55bc56e1f0c8}</Project>
       <Name>YekanPedia.MessagingGateway.Service</Name>

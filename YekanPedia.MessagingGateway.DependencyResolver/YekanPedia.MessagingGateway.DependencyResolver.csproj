@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BE22F12A-0937-4DC6-9894-55BC56E1F0C8}</ProjectGuid>
+    <ProjectGuid>{EFAE3863-C82E-4922-8FCC-416C9BE8BD89}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>YekanPedia.MessagingGateway.Service</RootNamespace>
-    <AssemblyName>YekanPedia.MessagingGateway.Service</AssemblyName>
+    <RootNamespace>YekanPedia.MessagingGateway.DependencyResolver</RootNamespace>
+    <AssemblyName>YekanPedia.MessagingGateway.DependencyResolver</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="StructureMap, Version=3.1.6.186, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.3.1.6.186\lib\net40\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap.Net4, Version=3.1.6.186, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.3.1.6.186\lib\net40\StructureMap.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.web.3.1.6.186\lib\net40\StructureMap.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,16 +52,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factory.cs" />
-    <Compile Include="Implement\NullObject.cs" />
-    <Compile Include="Implement\TelegramNotification.cs" />
-    <Compile Include="Interfaces\INotificationStrategy.cs" />
+    <Compile Include="Ioc\IocInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\YekanPedia.MessagingGateway.ExternalService\YekanPedia.MessagingGateway.ExternalService.csproj">
       <Project>{abdce685-a4c4-4acd-9d3a-577a322be151}</Project>
       <Name>YekanPedia.MessagingGateway.ExternalService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YekanPedia.MessagingGateway.Service\YekanPedia.MessagingGateway.Service.csproj">
+      <Project>{be22f12a-0937-4dc6-9894-55bc56e1f0c8}</Project>
+      <Name>YekanPedia.MessagingGateway.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

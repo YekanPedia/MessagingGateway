@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YekanPedia.MessagingGateway
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YekanPedia.MessagingGateway.Domain", "YekanPedia.MessagingGateway.Domain\YekanPedia.MessagingGateway.Domain.csproj", "{920350F8-D751-43C2-BF80-ACC3337004C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YekanPedia.MessagingGateway.ExternalService", "YekanPedia.MessagingGateway.ExternalService\YekanPedia.MessagingGateway.ExternalService.csproj", "{ABDCE685-A4C4-4ACD-9D3A-577A322BE151}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{920350F8-D751-43C2-BF80-ACC3337004C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{920350F8-D751-43C2-BF80-ACC3337004C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{920350F8-D751-43C2-BF80-ACC3337004C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABDCE685-A4C4-4ACD-9D3A-577A322BE151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABDCE685-A4C4-4ACD-9D3A-577A322BE151}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABDCE685-A4C4-4ACD-9D3A-577A322BE151}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABDCE685-A4C4-4ACD-9D3A-577A322BE151}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,5 +45,6 @@ Global
 		{63EE20BC-F713-4ABB-BAC9-A22760BE85CF} = {99514D7A-46DF-4850-8457-097B8B0432A5}
 		{BE22F12A-0937-4DC6-9894-55BC56E1F0C8} = {18B74239-B2C5-463C-B16A-8EDC1031C7DC}
 		{920350F8-D751-43C2-BF80-ACC3337004C7} = {18B74239-B2C5-463C-B16A-8EDC1031C7DC}
+		{ABDCE685-A4C4-4ACD-9D3A-577A322BE151} = {18B74239-B2C5-463C-B16A-8EDC1031C7DC}
 	EndGlobalSection
 EndGlobal
