@@ -139,10 +139,10 @@ namespace YekanPedia.MessagingGateway.ExternalService.RoboTeleProxy {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="RoboTeleProxy.IRoboTeleProxy")]
     public interface IRoboTeleProxy {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRoboTeleProxy/SendMessage", ReplyAction="http://tempuri.org/IRoboTeleProxy/SendMessageResponse")]
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IRoboTeleProxy/SendMessage")]
         void SendMessage(System.Collections.Generic.List<YekanPedia.MessagingGateway.ExternalService.RoboTeleProxy.SendMessageModel> model, YekanPedia.MessagingGateway.ExternalService.RoboTeleProxy.SecurityModel security);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRoboTeleProxy/SendMessage", ReplyAction="http://tempuri.org/IRoboTeleProxy/SendMessageResponse")]
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IRoboTeleProxy/SendMessage")]
         System.Threading.Tasks.Task SendMessageAsync(System.Collections.Generic.List<YekanPedia.MessagingGateway.ExternalService.RoboTeleProxy.SendMessageModel> model, YekanPedia.MessagingGateway.ExternalService.RoboTeleProxy.SecurityModel security);
     }
     
