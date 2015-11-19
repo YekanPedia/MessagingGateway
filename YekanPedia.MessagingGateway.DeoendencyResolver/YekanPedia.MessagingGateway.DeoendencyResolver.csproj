@@ -44,6 +44,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Channels" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +57,9 @@
   <ItemGroup>
     <Compile Include="Ioc\IocInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WcfServiceFactory\WcfInstanceProvider.cs" />
+    <Compile Include="WcfServiceFactory\WcfServiceFactory.cs" />
+    <Compile Include="WcfServiceFactory\WcfServiceHost.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

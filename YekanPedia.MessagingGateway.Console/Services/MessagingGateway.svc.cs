@@ -2,37 +2,40 @@
 {
     using Domain;
     using Service.Interfaces;
-    using DeoendencyResolver;
     using System.Collections.Generic;
     using System.Linq;
     public class MessagingGateway : IMessagingGateway
     {
-
         readonly ITelegramNotification _telegram;
-        public MessagingGateway()
+        public MessagingGateway(ITelegramNotification telegram)
         {
-            _telegram = IocInitializer.GetInstance<ITelegramNotification>();
+            _telegram = telegram;
         }
-        public void GivenMessages(NotificationPackage message)
+        public void GivenMessages(NotificationPackage package)
         {
             var TelegramReciever = new List<int>();
-            var Message = new List<string>() { message.Message.First() };
+            var Message = new List<string> { package.Message.First() };
 
-            var isOneMessage = message.Message.Count == 1;
+            var isOneMessage = package.Message.Count == 1;
             if (!isOneMessage)
                 Message.Clear();
-            for (int i = 0; i < message.Type.Count; i++)
+            #region Telegram
+            for (int i = 0; i < package.Type.Count; i++)
             {
-                if (message.Type[i].Telegram)
+                if (package.Type[i].Telegram)
                 {
                     if (!isOneMessage)
                     {
-                        Message.Add(message.Message[i]);
+                        Message.Add(package.Message[i]);
                     }
-                    TelegramReciever.Add(message.Telegram[i]);
+                    TelegramReciever.Add(package.Telegram[i]);
                 }
             }
-            _telegram.Notify(Message, TelegramReciever);
+            if (TelegramReciever.Count > 0)
+            {
+                _telegram.Notify(Message, TelegramReciever);
+            }
+            #endregion
         }
     }
 }

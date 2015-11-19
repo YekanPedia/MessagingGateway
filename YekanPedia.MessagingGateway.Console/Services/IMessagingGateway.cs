@@ -7,6 +7,6 @@
     public interface IMessagingGateway
     {
         [OperationContract(IsOneWay = true)]
-        void GivenMessages(NotificationPackage message);
+        void GivenMessages(NotificationPackage package);
     }
 }
