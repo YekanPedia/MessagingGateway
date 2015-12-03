@@ -17,6 +17,8 @@
             {
                 x.For<IRoboTeleProxyAdapter>().Use<RoboTeleProxyAdapter>();
                 x.For<ITelegramNotification>().Use<TelegramNotification>();
+                x.For<IEmailProxyAdapter>().Use<EmailProxyAdapter>();
+                x.For<IEmailNotification>().Use<EmailNotification>();
             });
         }
         public static object GetInstance(Type pluginType)

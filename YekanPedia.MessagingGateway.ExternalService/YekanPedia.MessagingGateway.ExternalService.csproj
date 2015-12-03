@@ -43,9 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implement\EmailProxyAdapter.cs" />
     <Compile Include="Implement\RoboTeleProxyAdapter.cs" />
+    <Compile Include="Interfaces\IEmailProxyAdapter.cs" />
     <Compile Include="Interfaces\IRoboTeleProxyAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\EmailGateway\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\RoboTeleProxy\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -57,6 +64,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Service References\EmailGateway\EmailGateway.wsdl" />
+    <None Include="Service References\EmailGateway\EmailGateway.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmailGateway\EmailGateway1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmailGateway\EmailGateway2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmailGateway\EmailGateway3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\RoboTeleProxy\RoboTeleProxy.wsdl" />
     <None Include="Service References\RoboTeleProxy\RoboTeleProxy.xsd">
       <SubType>Designer</SubType>
@@ -69,6 +89,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EmailGateway\" />
     <WCFMetadataStorage Include="Service References\RoboTeleProxy\" />
   </ItemGroup>
   <ItemGroup>
@@ -82,6 +103,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\RoboTeleProxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmailGateway\EmailGateway.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmailGateway\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmailGateway\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmailGateway\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

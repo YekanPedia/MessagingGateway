@@ -2,14 +2,17 @@
 {
     using Domain;
     using Service.Interfaces;
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     public class MessagingGateway : IMessagingGateway
     {
         readonly ITelegramNotification _telegram;
-        public MessagingGateway(ITelegramNotification telegram)
+        readonly IEmailNotification _emailNotification;
+        public MessagingGateway(ITelegramNotification telegram, IEmailNotification emailNotification)
         {
             _telegram = telegram;
+            _emailNotification = emailNotification;
         }
         public void GivenMessages(NotificationPackage package)
         {
@@ -19,21 +22,49 @@
             var isOneMessage = package.Message.Count == 1;
             if (!isOneMessage)
                 Message.Clear();
-            #region Telegram
-            for (int i = 0; i < package.Type.Count; i++)
+            #region Telegram  
+            try
             {
-                if (package.Type[i].Telegram)
+                for (int i = 0; i < package.Type.Count; i++)
                 {
-                    if (!isOneMessage)
+                    if (package.Type[i].Telegram)
                     {
-                        Message.Add(package.Message[i]);
+                        if (!isOneMessage)
+                        {
+                            Message.Add(package.Message[i]);
+                        }
+                        TelegramReciever.Add(package.Telegram[i]);
                     }
-                    TelegramReciever.Add(package.Telegram[i]);
+                }
+                if (TelegramReciever.Count > 0)
+                {
+                    _telegram.Notify(Message, TelegramReciever);
+                }
+
+            }
+            catch (Exception)
+            {
+
+            }
+            #endregion
+            #region Email
+            try
+            {
+                var email = new List<string>();
+                for (int i = 0; i < package.Type.Count; i++)
+                {
+                    if (package.Type[i].Email)
+                    {
+                        email.Add(package.Email[i]);
+                    }
+                }
+                if (email.Count > 0)
+                {
+                    _emailNotification.Notify(Message.First(), email);
                 }
             }
-            if (TelegramReciever.Count > 0)
+            catch (Exception)
             {
-                _telegram.Notify(Message, TelegramReciever);
             }
             #endregion
         }

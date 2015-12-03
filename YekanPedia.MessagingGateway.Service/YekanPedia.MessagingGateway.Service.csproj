@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implement\EmailNotification.cs" />
     <Compile Include="Implement\TelegramNotification.cs" />
+    <Compile Include="Interfaces\IEmailNotification.cs" />
     <Compile Include="Interfaces\ITelegramNotification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

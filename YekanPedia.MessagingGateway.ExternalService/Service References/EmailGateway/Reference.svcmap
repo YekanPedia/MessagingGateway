@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ae758741-ff5f-4fdf-b437-b3d512704cff" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:39965/Services/EmailGateway.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EmailGateway.xsd" MetadataType="Schema" ID="3127347e-c50a-4c99-9bbe-4af9ab78a65f" SourceId="1" SourceUrl="http://localhost:39965/Services/EmailGateway.svc?xsd=xsd3" />
+    <MetadataFile FileName="EmailGateway1.xsd" MetadataType="Schema" ID="0c3530e0-3b13-4cef-b433-776a8b52a08e" SourceId="1" SourceUrl="http://localhost:39965/Services/EmailGateway.svc?xsd=xsd2" />
+    <MetadataFile FileName="EmailGateway2.xsd" MetadataType="Schema" ID="6a267297-b7ee-4353-846e-514b593ef354" SourceId="1" SourceUrl="http://localhost:39965/Services/EmailGateway.svc?xsd=xsd1" />
+    <MetadataFile FileName="EmailGateway3.xsd" MetadataType="Schema" ID="ff314b64-d9b0-40d7-8553-222caf94154f" SourceId="1" SourceUrl="http://localhost:39965/Services/EmailGateway.svc?xsd=xsd0" />
+    <MetadataFile FileName="EmailGateway.wsdl" MetadataType="Wsdl" ID="2a298944-f4f7-4b54-bc2a-edde4097f659" SourceId="1" SourceUrl="http://localhost:39965/Services/EmailGateway.svc?wsdl" />
+    <MetadataFile FileName="EmailGateway.disco" MetadataType="Disco" ID="ffdb7d2d-22ee-4ae7-8f95-b803118e855c" SourceId="1" SourceUrl="http://localhost:39965/Services/EmailGateway.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
